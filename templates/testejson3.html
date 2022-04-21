@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <form id="name_form">
+            <label>Nome Completo: </label><input type="text" name="nomeCompleto"/><br>
+            <br/>
+            <label>E-mail: </label><input type="text" name="email"/><br>
+            <br/>
+            <input type="submit" value="submit" />
+        </form>
+        <input type="text" id="resp" name="resp"/>
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+            $('#name_form').submit(function(e) {
+                    e.preventDefault();
+
+            var person = {
+                nomeCompleto: $('[name=nomeCompleto]').val(),
+                email: $('[name=email]').val()
+            }
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/api/say_name3',
+                        data: person,
+                        success: function(callback) {
+                            console.log(callback);
+                            console.log(person);
+                            $('#resp').val('Ola ' + callback.nomeCompleto.toUpperCase());
+                        },
+                        error: function() {
+                            $(this).html("error!");
+                        }
+                    });
+                });
+        </script>
+    </body>
+</html>
+
