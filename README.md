@@ -12,4 +12,4 @@
 
 ![alt text](https://github.com/lucianonevesln/ac3_jquery/blob/main/img/img4.png)
 
-![alt text](https://github.com/lucianonevesln/ac3_jquery/blob/main/img/img6.png)
+![alt text](https://github.com/lucianonevesln/ac3_jquery/blob/main/img/img5.png)
